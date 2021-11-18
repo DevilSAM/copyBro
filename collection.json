@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "cd0bad75-d963-46cd-85fc-64f0412f5e67",
+		"name": "copybro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://copybro.site/api/user.update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "myName",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "newLastName",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+7 (900) 555-77-22",
+							"type": "text"
+						},
+						{
+							"key": "middle_name",
+							"value": "middleDude",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "YTDbhd@uuuuy.ln",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://copybro.site/api/user.update",
+					"protocol": "http",
+					"host": [
+						"copybro",
+						"site"
+					],
+					"path": [
+						"api",
+						"user.update"
+					]
+				},
+				"description": "user.update - required fields: last_name, first_name, phone"
+			},
+			"response": []
+		},
+		{
+			"name": "http://copybro.site/api/user.get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://copybro.site/api/user.get",
+					"protocol": "http",
+					"host": [
+						"copybro",
+						"site"
+					],
+					"path": [
+						"api",
+						"user.get"
+					]
+				},
+				"description": "user.get - prints out info about user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://copybro.site/api/notifications.get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://copybro.site/api/notifications.get",
+					"protocol": "http",
+					"host": [
+						"copybro",
+						"site"
+					],
+					"path": [
+						"api",
+						"notifications.get"
+					]
+				},
+				"description": "notifications.get - prints out user's unreaded notifications"
+			},
+			"response": []
+		},
+		{
+			"name": "http://copybro.site/api/notifications.read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://copybro.site/api/notifications.read",
+					"protocol": "http",
+					"host": [
+						"copybro",
+						"site"
+					],
+					"path": [
+						"api",
+						"notifications.read"
+					]
+				},
+				"description": "notifications.read - marks all user's notifies as viewed"
+			},
+			"response": []
+		}
+	]
+}
