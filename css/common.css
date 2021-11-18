@@ -1,0 +1,451 @@
+@font-face {
+    font-family: 'EuclidCircularA';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/EuclidCircularA-Light.woff2') format('woff2'),
+    url('../fonts/EuclidCircularA-Light.woff') format('woff'),
+    url('../fonts/EuclidCircularA-Light.ttf') format('truetype'),
+    url('../fonts/EuclidCircularA-Light.eot');
+}
+@font-face {
+    font-family: 'EuclidCircularA';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/EuclidCircularA-Regular.woff2') format('woff2'),
+    url('../fonts/EuclidCircularA-Regular.woff') format('woff'),
+    url('../fonts/EuclidCircularA-Regular.ttf') format('truetype'),
+    url('../fonts/EuclidCircularA-Regular.eot');
+}
+@font-face {
+    font-family: 'EuclidCircularA';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/EuclidCircularA-Medium.woff2') format('woff2'),
+    url('../fonts/EuclidCircularA-Medium.woff') format('woff'),
+    url('../fonts/EuclidCircularA-Medium.ttf') format('truetype'),
+    url('../fonts/EuclidCircularA-Medium.eot');
+}
+@font-face {
+    font-family: 'EuclidCircularA';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/EuclidCircularA-SemiBold.woff2') format('woff2'),
+    url('../fonts/EuclidCircularA-SemiBold.woff') format('woff'),
+    url('../fonts/EuclidCircularA-SemiBold.ttf') format('truetype'),
+    url('../fonts/EuclidCircularA-SemiBold.eot');
+}
+@font-face {
+    font-family: 'EuclidCircularA';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/EuclidCircularA-Bold.woff2') format('woff2'),
+    url('../fonts/EuclidCircularA-Bold.woff') format('woff'),
+    url('../fonts/EuclidCircularA-Bold.ttf') format('truetype'),
+    url('../fonts/EuclidCircularA-Bold.eot');
+}
+
+
+/* general styles */
+
+body {
+    font-family: EuclidCircularA, sans-serif;
+}
+.container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn {
+    color: white;
+    background-color: #0962E8;
+    border: none;
+    border-radius: 10px;
+    padding: 0.7rem 1.5rem;
+}
+h2 {
+    margin: 0;
+}
+.blue-text {
+    color: #0962E8;
+}
+
+/* это для последовательного появления блоков */
+#block_0, #block_1, #block_2, #block_3,
+#block_4, #block_5, #block_6, #block_7,
+#block_8, #block_9, #block_10 {
+    opacity: 0;
+    transition: 1s;
+}
+
+
+
+/* header styles */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+}
+.header .company-logo, .header .company-name, .header .upper-button {
+    align-self: center;
+}
+.header .company-logo {
+    width: 80px;
+    height: 80px;
+}
+.header .company-name {
+    width: 150px;
+    margin-left: 0.2rem;
+}
+.header .upper-button {
+    margin-left: auto;
+    font-size: 1.1rem;
+    margin-right: 2rem;
+}
+
+
+/* Investment styles */
+.investment {
+    display: flex;
+    margin-top: 5.5rem;
+}
+.invest-text, .invest-img {
+    width: 50%;
+}
+.invest-text {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+.invest-text .mobile-text {
+    display: none;
+}
+.invest-text .title {
+    font-size: 3.1rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+.invest-text .title.title-bottom {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.invest-text .profit {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.invest-text .profit .profit-num {
+    font-size: 3rem;
+}
+.invest-text .text {
+    font-size: 1.01rem;
+    line-height: 27px;
+    letter-spacing: 1.7px;
+}
+.investment .buttons-block {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+.investment .left-btn {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    order: 0;
+}
+.investment .mobile-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    order: 1;
+}
+.investment .mobile-links img {
+    width: 48%;
+}
+
+
+/* right images block */
+.investment .man-image .main-man-image.mobile-man {
+    display: none;
+}
+.investment .man-image {
+    position: relative;
+    padding-left: 6rem;
+}
+.investment .man-image .main-man-image {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+    width: 350px;
+}
+.investment .man-image .colored-block {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 170px;
+    padding: 5rem 1rem 2rem 1.2rem;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+.investment .man-image .colored-block .title {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.investment .man-image .colored-block .text {
+    line-height: 25px;
+}
+.investment .man-image .colored-block .icon-wrapper {
+    position: relative;
+}
+.investment .man-image .colored-block .icon-wrapper img {
+    position: absolute;
+    width: 85px;
+    transform: translateY(-100%);
+}
+.investment .man-image .orange-block {
+    background: linear-gradient(180deg, #FFE1C5 0%, #FF7A00 65.62%);
+    transform: translate(-50%, 70%);
+}
+.investment .man-image .blue-block {
+    background: linear-gradient(180deg, #99E0FE 26.56%, #488ECC 78.65%);
+    left: 50%;
+    transform: translate(-20%, 96%);
+}
+.investment .man-image .grey-block {
+    background: linear-gradient(180deg, rgba(151, 186, 219, 0.9) 0%, rgba(6, 43, 97, 0.9) 100%);
+    right: 0;
+    transform: translate(55%, 30%);
+}
+
+
+/* lowest block let's call it FOOTER */
+.footer {
+    margin-top: 15rem;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-image img {
+    width: 85%;
+}
+.footer-image {
+    align-self: center;
+    width: 50%;
+    padding-right: 2rem;
+}
+.footer-text {
+    align-self: center;
+    width: 50%;
+    padding-left: 2rem;
+}
+.footer-text .footer-title {
+    font-size: 3.1rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+.footer-text .footer-small-text {
+    line-height: 35px;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+
+/* Xl */
+@media (max-width: 1200px) {
+    .container {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    .invest-text {
+        width: 60%;
+    }
+    .invest-img {
+        width: 40%;
+    }
+    .investment .man-image {
+        padding-left: 0;
+    }
+    .investment .man-image .main-man-image {
+        width: 330px;
+    }
+    .investment .man-image .colored-block {
+        padding-top: 1rem;
+        padding-bottom: 0;
+    }
+    .investment .man-image .colored-block .icon-wrapper img {
+        width: 60px;
+        transform: translateY(-65%);
+    }
+    .investment .man-image .orange-block {
+        transform: translate(0, 50%);
+        width: 40%;
+    }
+    .investment .man-image .blue-block {
+        transform: translate(0, 20%);
+        left: 0;
+        top: 0;
+        width: 90%;
+        z-index: -1;
+        height: fit-content;
+    }
+    .investment .man-image .grey-block {
+        transform: translate(0, 70%);
+        width: 40%;
+    }
+
+    /* нижняя часть верстки */
+    .footer {
+        margin-top: 9rem;
+    }
+    .footer-image img {
+        width: 100%;
+    }
+}
+
+/* LG */
+@media (max-width: 992px) {
+    .header .upper-button {
+        margin-right: 0;
+    }
+    .investment {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+    .invest-text {
+        width: 100%;
+        order: 1;
+    }
+    .invest-img {
+        width: 100%;
+        order: 0;
+    }
+    .invest-text .desktop-text {
+        display: none;
+    }
+    .invest-text .mobile-text {
+        display: block;
+        margin-top: 10rem;
+    }
+
+    /* кнопки для загрузки приложения android + iOS */
+    .investment .buttons-block {
+        width: 80%;
+    }
+    .investment .left-btn {
+        order: 1;
+    }
+    .investment .mobile-links {
+        order: 0;
+    }
+
+    /* блок с картинками */
+    .investment .man-image .main-man-image.mobile-man#block_0 {
+        display: block;
+        opacity: 1;
+    }
+    .investment .man-image .main-man-image.desktop-man {
+        display: none;
+    }
+    .investment .man-image {
+        padding-left: 0;
+    }
+    .investment .man-image .main-man-image {
+        margin-top: 0;
+    }
+    .investment .man-image .colored-block {
+        padding-top: 2rem;
+        padding-bottom: 0;
+    }
+    .investment .man-image .colored-block .icon-wrapper img {
+        width: 50px;
+        transform: translateY(-80%);
+    }
+    .investment .man-image .orange-block {
+        transform: translate(0, 50%);
+        width: 30%;
+    }
+    .investment .man-image .blue-block {
+        transform: translate(0, 20%);
+        width: 85%;
+    }
+    .investment .man-image .grey-block {
+        transform: translate(0, 70%);
+        width: 30%;
+    }
+
+    /* нижняя часть верстки */
+    .footer {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .footer-image {
+        width: 100%;
+        padding-left: 2rem;
+    }
+    .footer-text {
+        width: 100%;
+        padding-left: 0;
+    }
+
+}
+
+/* MD */
+@media (max-width: 768px) {
+
+    .container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    /* верхний блок с текстом */
+    .invest-text .title {
+        font-size: 2.6rem;
+    }
+
+    /* блок кнопок для скачивания приложения */
+    .investment .buttons-block {
+        width: 100%;
+    }
+
+    /* нижняя часть верстки */
+    .footer-image {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .footer-image img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .footer-text {
+        width: 100%;
+    }
+    .footer-text .footer-title {
+        font-size: 2.6rem;
+    }
+    .footer-text .footer-small-text {
+        font-size: 1rem;
+    }
+}
+
+/* SM */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    /* кнопки для загрузки приложения android + iOS */
+    .investment .buttons-block {
+        width: 100%;
+    }
+}

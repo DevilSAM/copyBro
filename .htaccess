@@ -11,7 +11,7 @@ Allow from all
     RewriteEngine On
 
     # redirect to API
-    RewriteRule ^(.*)$ index.php [L]
+    RewriteRule ^api(.*)$ api/index.php [L]
 
 </IfModule>
 
